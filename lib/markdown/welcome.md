@@ -147,15 +147,15 @@ user_input.downcase == existing_username
 
 is part of the process that Twitter goes through to make sure that no one can sign up using the same username as [David Heinemeier Hansson](https://twitter.com/dhh), the creator of Ruby on Rails, even if they tried to be sneaky and use mixed-case.
 
-Remember our Photogram Database exercise? Each step of what you did then to, for example, figure out a user's timeline was no more complicated than each of these steps; now you just have to learn how to write them down in Ruby and instruct the computer to do them for you.
+Remember our Photogram Database exercise? Figuring out which photos were on a user's timeline -- a seemingly complicated task -- ended up being a long sequences of small and simple steps, like the ones above. Most applications are. Now we just need to learn enough Ruby vocabulary to teach the computer what we want it to do. We'll spend the next several lessons doing so.
 
 ## Rails
 
-We're going to dig in and go in to much more detail on each of the above topics in the next few lessons, but now that you've written your first few statements in the Ruby language, what is Ruby ***on Rails***?
+Before we dig in to Ruby, let's talk a little bit more about Ruby ***on Rails***.
 
 Ruby, as a general purpose language, can be used for just about anything -- producing music[^1], flying drones[^2], you name it. What we want to do with it, though, is produce a useful HTML page and send it to our users through a browser -- just like the one you are looking at right now!
 
-“Ruby on Rails” is just a name for a bunch of pre-written Ruby code that we are going to borrow which takes care of all the plumbing involved with delivering (on rails, if you will) the output of our Ruby programs to our users through their browsers, wrapped up in beautiful HTML. That way, we can focus on the fun stuff -- bringing our ideas to life!
+“Ruby on Rails” is just a name for a bunch of pre-written Ruby code -- you downloaded it when you began this project. We are going to borrow it because it takes care of all the plumbing involved with delivering (on rails, if you will) the output of our Ruby programs to our users through their browsers, wrapped up in beautiful HTML. That way, we can focus on the fun stuff -- bringing our ideas to life!
 
 [^1]: [http://sonic-pi.net/](http://sonic-pi.net/)
 
