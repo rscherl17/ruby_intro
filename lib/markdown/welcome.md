@@ -155,7 +155,9 @@ Before we dig in to Ruby, let's talk a little bit more about Ruby ***on Rails***
 
 Ruby, as a general purpose language, can be used for just about anything -- producing music[^1], flying drones[^2], you name it. What we want to do with it, though, is produce a useful HTML page and send it to our users through a browser -- just like the one you are looking at right now!
 
-“Ruby on Rails” is just a name for a bunch of pre-written Ruby code -- like what you downloaded when you began this project. It already has all the plumbing involved with delivering (on rails, if you will) the output of our Ruby programs to our users through their browsers included. That way, we can focus on the fun stuff -- bringing our ideas to life! Let's get started.
+“Ruby on Rails” is just a name for a bunch of pre-written Ruby code -- like what you downloaded when you began this project. It already has all the plumbing involved with delivering (on rails, if you will) the output of our Ruby programs to our users through their browsers included. That way, we can focus on the fun stuff -- bringing our ideas to life!
+
+Let's get started.
 
 [^1]: [http://sonic-pi.net/](http://sonic-pi.net/)
 
