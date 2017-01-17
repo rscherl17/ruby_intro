@@ -147,7 +147,7 @@ user_input.downcase == existing_username
 
 is part of the process that Twitter goes through to make sure that no one can sign up using the same username as [David Heinemeier Hansson](https://twitter.com/dhh), the creator of Ruby on Rails, even if they tried to be sneaky and use mixed-case.
 
-Remember our Photogram Database exercise? Figuring out which photos were on a user's timeline -- a seemingly complicated task -- ended up being a long sequences of small and simple steps, like the ones above. Most applications are. Now we just need to learn enough Ruby vocabulary to teach the computer what we want it to do. We'll spend the next several lessons doing so.
+Remember our Photogram Database exercise? Figuring out which photos were on a user's timeline -- a seemingly complicated task -- ended up being a long sequence of small and simple steps, like the ones above. Most applications are. It was tedious for us to do it by hand, though, so now we just need to learn enough Ruby vocabulary to teach the computer to do it for us. We'll spend the next several lessons learning just that.
 
 ## Rails
 
