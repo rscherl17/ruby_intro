@@ -97,7 +97,7 @@ But Ruby has a more important way to save that piece of data: we can create a bo
 
 ```ruby
 s = "Hello" # Create a box, label it `s`, and store "Hello" in it
-s           # What's in `s`?
+s           # Retrieve the value in `s`?
 s.capitalize
 s.reverse
 s.upcase
