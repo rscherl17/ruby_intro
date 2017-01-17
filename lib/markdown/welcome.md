@@ -1,8 +1,8 @@
-# Chapter 1
+# Welcome
 
 Welcome! You just launched a **Ruby on Rails** application. Congratulations!
 
-What the heck is Ruby on Rails? Good question. To answer that, first consider what we can and can't do with plain old HTML:
+What is Ruby on Rails? To answer that, first consider what we can and can't do with plain old HTML:
 
 We can:
 
@@ -11,38 +11,145 @@ We can:
 
 But we can't:
 
- - Perform **computations** on data -- for example, `24 × 365`, or how many hours are there in a year? HTML cannot answer this question.
- - Have **dynamic content** like a random word that we didn't type into the source code of the page ourselves -- for example, did an opponent choose rock, paper, or scissors?
- - Display messages only if certain **conditions** are met -- for example, "You win!" if you chose rock and the opponent chose scissors.
+ - Perform **computations** on data.
+  - For example, `24 × 365`, or how many hours are there in a year? HTML cannot answer this question.
+ - Have **dynamic content** like a random word that we didn't type into the source code of the page ourselves.
+  - For example, did a computer opponent choose rock, paper, or scissors?
+ - Display messages only if certain **conditions** are met.
+  - For example, "You win!" if you chose rock and the opponent chose scissors.
 
 Basically, HTML by itself can only produce static, unchanging websites that look the same to all visitors, and all you can do on them is click around them and read them. It's a *markup language* for content.
 
-This might be fine for some informational sites and maybe landing pages, but it will clearly not do for the kind of tailored, interactive web applications that we love to use and want to build.
+This might be fine for some informational sites (like the location, hours, and menu of a restaurant), but it will clearly not do for the kind of tailored, interactive web applications that we want to build (like GrubHub, where we can leave reviews or order delivery).
 
-So, we need to learn a *general purpose language* in addition to HTML, so that we're not limited to just formatting static data. We want to compute things on behalf of our users, tailor the experience for them based on who they are, and much more.
+So, we need to learn a *general purpose language* in addition to HTML, so that we're not limited to just formatting static data. We want to save information on behalf of our users, tailor the experience for them based on who they are, and much more.
 
-There are many general purpose programming languages, but the one that we're going to learn is called Ruby. It can do all three of the above things, and much more. Give it a try right now -- in the dark box below, type the following and press <kbd>return</kbd> after each:
+## Ruby
 
- - `24 * 365`
- - `rand(52)`
- - `rand(52)` again (you can press the up arrow to get back your last command)
- - `1 < 2`
- - `2 < 1`
- - `1 == 1`
- - `1 == 2`
- - `"dhh" == "DhH"`
- - `"DhH".downcase`
- - `u = "DhH".downcase`
- - `"dhh" == u`
+There are many general purpose programming languages, but the one that we're going to learn is called Ruby. It can do all three of the above things, and much more.
 
-The last two lines are part of what Twitter would have to do to make sure that no one can sign up using the same username as [David Heinemeier Hansson](https://twitter.com/dhh), the creator of Ruby on Rails.
+Let's give it a try right now -- in the dark box at the bottom of this window, type the following after the `>>` prompt and press <kbd>return</kbd> after each line.
 
-So now that you've written your first few statements in the Ruby language, what is Ruby *on Rails*?
+### Simple math
 
-Ruby, as a general purpose language, can be used for just about anything -- producing music[^1], flying drones[^2], you name it. What we want to do with it, though, is produce a useful HTML page and send it to our users through a browser.
+```ruby
+24 * 365
+```
+
+### Random numbers
+
+```ruby
+rand(3)
+```
+
+Try it again  (you can just press the up arrow to get back your last command):
+
+```ruby
+rand(3)
+```
+
+Try it again if you have to until you get a different number 🎲
+
+### Comparison statements
+
+(Only type the stuff before the `#`; the stuff after are known as *code comments*, and are just there as notes to ourselves. They have no effect on the program.)
+
+```ruby
+1 < 2  # "1 is less than 2"
+2 < 1  # "2 is less than 1"
+24*365 > 10000 # Are there more than 10,000 hours in a year?
+1 == 1 # "1 is equivalent to 1"
+1 == 2 # "1 is equivalent to 2"
+1 != 1 # "1 is NOT equivalent to 1"
+1 != 2 # "1 is NOT equivalent to 2"
+```
+
+### Strings
+
+Unlike your pocket calculator, Ruby can work with many more data types than just numbers. Most importantly, Ruby can work with text, which we wrap inside quotation marks and refer to as "strings":
+
+```ruby
+"hello"
+```
+
+That wasn't very interesting, but note that if you left out the quotation marks, Ruby gets confused:
+
+```ruby
+hello
+```
+
+Your very first error message! You are going to see a *lot* of these -- 99% of developing software is trying to figure out error messages. They might look scary at first, but later on they will become helpful old friends!
+
+Anyway, let's do something more interesting with strings:
+
+```ruby
+"Hello".length
+"Hello".downcase
+"Hello".upcase
+"Hello".reverse
+```
+
+### Variables
+
+Remember, you can use your up and down arrows to scroll through your command history. That would save you from retyping `"Hello"` over and over.
+
+But Ruby has a more important way to save that piece of data: we can create a box to hold it and give that box a name, like so:
+
+```ruby
+s = "Hello"
+s
+s.capitalize
+s.reverse
+s.upcase
+```
+
+You could also throw away what you have in the box labeled `s` and put in something new:
+
+```ruby
+s = "hi"
+s = 60 * 60
+s
+```
+
+You could even replace the value in the box with an updated version of the old value, because the instructions on the right side of the equals sign are executed before the throwing away happens:
+
+```ruby
+s = "hi"
+s
+s = s.capitalize
+s
+```
+
+And you can create as many of these boxes as you want:
+
+```ruby
+a = "hi"
+b = "there"
+c = "world"
+```
+
+(Note that here we are using a single-equals sign, `=`, the **variable assignment operator**. Above, while doing comparisons, we used the *completely and totally different* double-equals sign, `==`, the **logical equivalence operator**.)
+
+### Putting it together
+
+Believe it or not, from these simple building blocks, we can build up much of what happens on the web today. For example,
+
+```ruby
+user_input = "DhH"
+existing_username = "dhh"
+user_input.downcase == existing_username
+```
+
+is part of the check that Twitter would have to do to make sure that no one can sign up using the same username as [David Heinemeier Hansson](https://twitter.com/dhh), the creator of Ruby on Rails, even if they tried to be sneaky and use mixed-case.
+
+## Rails
+
+We're going to dig in and go in to much more detail on each of the above topics in the next few lessons, but now that you've written your first few statements in the Ruby language, what is Ruby *on Rails*?
+
+Ruby, as a general purpose language, can be used for just about anything -- producing music[^1], flying drones[^2], you name it. What we want to do with it, though, is produce a useful HTML page and send it to our users through a browser -- just like the one you are looking at right now!
 
 “Rails” is just a name for a bunch of pre-written Ruby code that we are going to borrow which takes care of all the plumbing involved with getting the output of our Ruby programs to our users through their browsers, so that we can focus on the fun stuff.
 
-[^1]: http://sonic-pi.net/
+[^1]: [http://sonic-pi.net/](http://sonic-pi.net/)
 
-[^2]: http://artoo.io/
+[^2]: [http://artoo.io/](http://artoo.io/)
