@@ -66,7 +66,7 @@ Try it again if you have to until you get a different number 🎲
 
 ### Strings
 
-Unlike your phone's calculator app, Ruby can work with many more data types than just numbers. Most importantly, Ruby can work with text, which we wrap inside quotation marks and refer to as "strings":
+Unlike your phone's calculator app, Ruby can work with many more data types than just numbers. Most importantly, Ruby can work with text, which we wrap inside quotation marks and refer to as "strings" (of characters):
 
 ```ruby
 "hello"
