@@ -136,15 +136,18 @@ c
 
 ### Putting it together
 
-Believe it or not, from these simple building blocks, we can build up much of what happens on the web today. For example,
+Believe it or not, from these simple building blocks, we can build up much of what happens on the web today. For example, something like
 
 ```ruby
 user_input = "DhH"
 existing_username = "dhh"
-user_input.downcase == existing_username # double-equals, not single!
+user_input == existing_username # double-equals, not single!
+user_input.downcase == existing_username
 ```
 
-is part of the check that Twitter would have to do to make sure that no one can sign up using the same username as [David Heinemeier Hansson](https://twitter.com/dhh), the creator of Ruby on Rails, even if they tried to be sneaky and use mixed-case.
+is part of the process that Twitter goes through to make sure that no one can sign up using the same username as [David Heinemeier Hansson](https://twitter.com/dhh), the creator of Ruby on Rails, even if they tried to be sneaky and use mixed-case.
+
+Remember our Photogram Database exercise? Each step of what you did then to, for example, figure out a user's timeline was no more complicated than each of these steps; now you just have to learn how to write them down in Ruby and instruct the computer to do them for you.
 
 ## Rails
 
