@@ -57,7 +57,7 @@ Try it again if you have to until you get a different number 🎲
 ```ruby
 1 < 2  # "1 is less than 2"
 2 < 1  # "2 is less than 1"
-24*365 > 10000 # Are there more than 10,000 hours in a year?
+24*365 > 10000 # There more than 10,000 hours in a year
 1 == 1 # "1 is equivalent to 1"
 1 == 2 # "1 is equivalent to 2"
 1 != 1 # "1 is NOT equivalent to 1"
@@ -91,13 +91,13 @@ Anyway, let's do something more interesting with strings:
 
 ### Variables
 
-Remember, you can use your up and down arrows to scroll through your command history. That would save you from retyping `"Hello"` over and over.
+Remember, you can use your up and down arrows to scroll through your command history. That would have saved you from retyping `"Hello"` over and over.
 
 But Ruby has a more important way to save that piece of data: we can create a box to hold it and give that box a name, like so:
 
 ```ruby
-s = "Hello"
-s
+s = "Hello" # Create a box, label it `s`, and store "Hello" in it
+s           # What's in `s`?
 s.capitalize
 s.reverse
 s.upcase
@@ -107,6 +107,7 @@ You could also throw away what you have in the box labeled `s` and put in someth
 
 ```ruby
 s = "hi"
+s
 s = 60 * 60
 s
 ```
@@ -126,6 +127,9 @@ And you can create as many of these boxes as you want:
 a = "hi"
 b = "there"
 c = "world"
+a
+b
+c
 ```
 
 (Note that here we are using a single-equals sign, `=`, the **variable assignment operator**. Above, while doing comparisons, we used the *completely and totally different* double-equals sign, `==`, the **logical equivalence operator**.)
@@ -137,18 +141,18 @@ Believe it or not, from these simple building blocks, we can build up much of wh
 ```ruby
 user_input = "DhH"
 existing_username = "dhh"
-user_input.downcase == existing_username
+user_input.downcase == existing_username # double-equals, not single!
 ```
 
 is part of the check that Twitter would have to do to make sure that no one can sign up using the same username as [David Heinemeier Hansson](https://twitter.com/dhh), the creator of Ruby on Rails, even if they tried to be sneaky and use mixed-case.
 
 ## Rails
 
-We're going to dig in and go in to much more detail on each of the above topics in the next few lessons, but now that you've written your first few statements in the Ruby language, what is Ruby *on Rails*?
+We're going to dig in and go in to much more detail on each of the above topics in the next few lessons, but now that you've written your first few statements in the Ruby language, what is Ruby ***on Rails***?
 
 Ruby, as a general purpose language, can be used for just about anything -- producing music[^1], flying drones[^2], you name it. What we want to do with it, though, is produce a useful HTML page and send it to our users through a browser -- just like the one you are looking at right now!
 
-“Rails” is just a name for a bunch of pre-written Ruby code that we are going to borrow which takes care of all the plumbing involved with getting the output of our Ruby programs to our users through their browsers, so that we can focus on the fun stuff.
+“Ruby on Rails” is just a name for a bunch of pre-written Ruby code that we are going to borrow which takes care of all the plumbing involved with delivering the output of our Ruby programs to our users through their browsers (on rails, if you will). That way, we can focus on the fun stuff -- bringing our ideas to life!
 
 [^1]: [http://sonic-pi.net/](http://sonic-pi.net/)
 
