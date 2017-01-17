@@ -1,3 +1,9 @@
-<%= table_of_contents_renderer.render(@chapter_content).html_safe %>
+<div class="row">
+  <div class="col-sm-6">
+    <%= markdown_renderer.render(@chapter_content).html_safe %>
+  </div>
 
-<%= markdown_renderer.render(@chapter_content).html_safe %>
+  <div class="col-sm-6">
+    <%= table_of_contents_renderer.render(@chapter_content).html_safe %>
+  </div>
+</div>
