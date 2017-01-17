@@ -28,7 +28,7 @@ So, we need to learn a *general purpose language* in addition to HTML, so that w
 
 There are many general purpose programming languages, but the one that we're going to learn is called Ruby. It can do all three of the above things, and much more.
 
-Let's give it a try right now -- in the dark box at the bottom of this window, type the following after the `>>` prompt and press <kbd>return</kbd> after each line.
+Let's give it a try right now -- in the dark box on the right side of this window, type the following after the `>>` prompt and press <kbd>return</kbd> after each line.
 
 ### Simple math
 
