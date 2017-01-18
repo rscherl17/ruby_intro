@@ -10,6 +10,7 @@ class ProgramsController < ApplicationController
   def conditionals
     # Your code goes here
 
+    @your_output = "Replace this string with your output"
 
     render("programs/conditionals.html.erb")
   end

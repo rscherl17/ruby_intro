@@ -57,7 +57,7 @@ Try it again if you have to until you get a different number 🎲
 ```ruby
 1 < 2          # "1 is less than 2"
 2 < 1          # "2 is less than 1"
-24*365 > 10000 # There more than 10,000 hours in a year
+24*365 > 10000 # There are more than 10,000 hours in a year
 1 == 1         # "1 is equivalent to 1"
 1 == 2         # "1 is equivalent to 2"
 1 != 1         # "1 is NOT equivalent to 1"

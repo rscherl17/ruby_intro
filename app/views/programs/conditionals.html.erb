@@ -1,1 +1,43 @@
 <h1>Conditionals</h1>
+
+<p>Previously, we mentioned that Ruby allows us to compare values, and returns <code>true</code> or <code>false</code>:</p>
+
+<div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span>          <span class="c1"># &quot;1 is less than 2&quot;</span>
+<span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span>          <span class="c1"># &quot;2 is less than 1&quot;</span>
+<span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span>         <span class="c1"># &quot;1 is equivalent to 1&quot;</span>
+<span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span>         <span class="c1"># &quot;1 is equivalent to 2&quot;</span>
+<span class="mi">1</span> <span class="o">!=</span> <span class="mi">1</span>         <span class="c1"># &quot;1 is NOT equivalent to 1&quot;</span>
+<span class="mi">1</span> <span class="o">!=</span> <span class="mi">2</span>         <span class="c1"># &quot;1 is NOT equivalent to 2&quot;</span>
+</pre></div>
+
+<p>This becomes useful in conjunction with the <code>if</code> statement, which allows us to do things <em>conditionally</em> in our programs, rather than doing them on every run.</p>
+
+<p>Let's see how this works. Locate the file called <code>app/controllers/programs_controller.rb</code> and let's write some code where it says:</p>
+
+<pre>
+  def conditionals
+    # Your code goes here
+
+    @your_output = "Replace this string with your output"
+
+    render("programs/conditionals.html.erb")
+  end
+</pre>
+
+First, try this:
+
+<pre>
+  def conditionals
+    if 1 < 2
+      message = "duh"
+    end
+
+    @your_output = message
+
+    render("programs/conditionals.html.erb")
+  end
+</pre>
+
+<div class="well">
+  <%= @your_output %>
+</div>
