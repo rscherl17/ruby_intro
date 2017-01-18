@@ -6,4 +6,11 @@ class ProgramsController < ApplicationController
 
     render("programs/permanent_programs.html.erb")
   end
+
+  def conditionals
+    # Your code goes here
+
+
+    render("programs/conditionals.html.erb")
+  end
 end
