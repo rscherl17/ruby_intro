@@ -77,6 +77,8 @@ u.capitalize  # Oops.
 u = u.strip
 u.capitalize
 u.titlecase
+u.split       # This produces an Array, which we discuss below.
+u.split.count
 
 "lo".in?("hello")
 "".present?
@@ -118,4 +120,41 @@ Finally, we have a very important class: `Array`. Most of what we do as web deve
 The first structure we're going to learn to help us manage lists is `Array`. Here's how they work:
 
 ```ruby
+a = [8, 3, 1, 19, 23]
 ```
+
+ - The way we create `String`s by wrapping the string of characters in double-quotes, we create `Array`s by wrapping the list of elements in square brackets.
+ - Seperate elements in the list with commas.
+
+Now that we've created our array, what can we do with it? Here are some handy methods to try:
+
+```ruby
+a.count
+a.reverse
+a.sort
+a.sort.reverse
+a.shuffle
+a.sample
+a.first
+a.last
+a.second
+a[3]           # Accesses the 4th element! Surprising.
+a[0]           # Arrays start their numbering at 0.
+a.push(42)
+a.count
+a.last
+```
+
+## To Learn More
+
+That's a fun selection of some common methods, but obviously there are a lot more. To learn more, usually my MO is: start building something, run into a situation where I need a new tool, like: "How do I find what spot in an array a particular element is at?"
+
+Then, you should, in order:
+
+ - Post a question on Piazza. You are brand new to programming and the answers that you will find on the internet will oftentimes be advanced or just flat out wrong, and you won't yet be able to tell the difference easily. So for now, lean on us and each other.
+ - Check the Ruby Docs for whichever class you are wondering about. In this case, the [Array docs](https://ruby-doc.org/core-2.2.0/Array.html). Scan the method list on the left until you see something that looks kinda right, and then check out the examples.
+ - Google it and hope to find a helpful blog post or Stack Overflow answer.
+
+## Next Up
+
+Alright! It's been fun playing around with Ruby in the console on the right, but how would we actually builds some real, permanent programs that we can share with our friends? That's what we'll see next.
