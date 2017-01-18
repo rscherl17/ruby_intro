@@ -1,4 +1,4 @@
-# Ruby Fundamental Syntax
+# Ruby Primary Syntax
 
 ## Nouns, Verbs, and Grammar
 
@@ -260,13 +260,13 @@ Rubyists strive to choose descriptive variable names, no matter how long they ar
 
 ## Conclusion
 
-That's it for the fundamental syntax of Ruby!
+That's it for the primary syntax of Ruby!
 
 ```
 storage_box = object.method(argument1, argument2, ...)
 ```
 
-Now, we need to spend a lot of time *expanding our vocabulary*. Let's start with the most fundamental built-in classes that Ruby gives us.
+Now, we need to spend some time *expanding our vocabulary*. Let's start with the most fundamental built-in classes that Ruby gives us.
 
 
 

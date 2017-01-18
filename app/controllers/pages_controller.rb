@@ -5,9 +5,9 @@ class PagesController < ApplicationController
     render("pages/welcome.html.erb")
   end
 
-  def rough
-    @chapter_content = File.open(Rails.root.join("lib", "markdown", "rough.md")).read
+  def primary_syntax
+    @chapter_content = File.open(Rails.root.join("lib", "markdown", "primary_syntax.md")).read
 
-    render("pages/rough.html.erb")
+    render("pages/primary_syntax.html.erb")
   end
 end
