@@ -1,4 +1,4 @@
-# Ruby Fundamentals
+# Ruby Fundamental Syntax
 
 ## Nouns, Verbs, and Grammar
 
@@ -12,7 +12,7 @@ Let's consider a computer that you already know how to program:
 
 When we're using (or programming) a calculator, our data are numbers and we want to tell the processor to add, subtract, multiply, and perform other calculations on them.
 
-When we write an expression in the calculator language, we need to put together **data** and **instructions** in an order that makes sense; for example, if we press the keys <kbd>7</kbd> <kbd>×</kbd> <kbd>6</kbd> <kbd>=</kbd> in that sequence, we will see the intended output in the screen.
+When we write an **expression** in the calculator language, we need to put together **data** and **instructions** in an order that makes sense; for example, if we press the keys <kbd>7</kbd> <kbd>×</kbd> <kbd>6</kbd> <kbd>=</kbd> in that sequence, we will see the intended output in the screen.
 
 We refer to "an order that makes sense" as the language's **syntax**, or grammar. In the calculator language, <kbd>×</kbd> <kbd>7</kbd> <kbd>=</kbd> <kbd>6</kbd> would not be valid syntax.
 
@@ -53,7 +53,7 @@ and there are only a few **syntax** rules:
 
 It's a very small language, but it demonstrates the same parts as any other programming language: **data**, **instructions**, and **syntax**.
 
-I think of them as **nouns**, **verbs**, and **grammar**. For each language we want to learn, we just have to learn what **things** we can work with, what we can **do** with those things, and how to put together valid **sentences** to tell the processor to do them.
+I think of them as *nouns*, *verbs*, and *grammar*. For each language we want to learn, we just have to learn what *things* we can work with, what we can *do* with those things, and how to put together valid *expressions* to tell the processor to do them.
 
 ### HTML
 
@@ -128,7 +128,9 @@ Each class of data has its own set of **instructions** that it can perform:
 
 Ruby is known as a "batteries included" language because it includes so many instructions out-of-the-box, saving the programmer the trouble of having to re-invent the wheel.
 
-Finally, *we can even make up our own nouns and verbs* and add them to the language. For example, we can add a data type `Restaurant`, teach it to calculate its average rating, and add that to its instruction set.
+Finally, *we can even make up our own nouns and verbs* and add them to the language. For example, we can add a data type `Restaurant`, teach it to calculate its average rating, and add that to its instruction set. Ruby programmers very often share these new classes with one another, making the language ever more powerful -- Rails itself is largely just a collection of these new nouns and verbs related to web applications!
+
+#### `object.method`
 
 So, in terms of **data** and **instructions**, Ruby comes with a powerful set out-of-the-box *and* is infinitely extensible! That's good news. Here's even more good news: to access all of this power, the **primary syntax** is simple:
 
@@ -158,7 +160,7 @@ Why, then, when you typed `9.down` didn't it suggest `9.downcase`? In fact, even
 
 And that is precisely what you need to be thinking at all times as you are writing Ruby. **What class of object do I have?** **What methods can I call on this kind of object?**
 
-Alright, so the **primary syntax** in Ruby is very simple -- `object.method`. However, here's one small wrinkle: some methods require additional inputs. For example, there is a method called `gsub` which we can call on `String`s, which will substitute characters with other characters:
+Alright, so the **primary syntax** in Ruby is very simple -- `object.method`. However, here's one small wrinkle: some methods require additional inputs. For example, there is a method called `gsub` which we can call on `String`s, which will substitute characters with other characters. Try it:
 
 ```ruby
 "Hello".gsub("l", "z")
@@ -172,17 +174,17 @@ In reality, `gsub` is more often used to do things like remove spaces from usern
 "   DhH ".gsub(" ", "")
 ```
 
-Now that you've seen arguments, you know the full **primary syntax** of Ruby. No kidding, this is 99.9% of the language.
+Now that you've seen arguments, you know the full **primary syntax** of Ruby. No kidding: `object.method(argument1, argument2, ...)` is the *vast* majority of what we'll be writing. That's it.
 
-"But wait!," you say, "what about when I do math like `7 * 6`? That is clearly not `object.method`." A very good question. Try this: `7.*(6)` What?!
+"But wait!," you say, "what about when I do math like `7 * 6`? That is clearly not `object.method`." A very good question. Try this instead: `7.*(6)` What?!
 
-`*` is the name of a method on the `Fixnum` class, which takes an argument of another `Fixnum`, and returns the product of the two. 😳💥😲
+Why does this work? `*` is the name of a method on the `Fixnum` class, which takes an argument of another `Fixnum`, and returns the product of the two. 😳💥😲
 
-When [Yukihiro Matsumoto](https://twitter.com/yukihiro_matz) designed the Ruby language, his stated goal was "developer happiness" (which was radical at that time, 1993, when most languages were geared for computer efficiency).
+When [Yukihiro Matsumoto](https://twitter.com/yukihiro_matz) designed the Ruby language, his goal was "developer happiness" (which was radical at that time, 1993, when most languages were geared for computer efficiency).
 
-He knew that if he made developers type `7.*(6)` every time they wanted to multiply two numbers, they would not be happy developers. So he included a few bits of "syntactic sugar", or shortcuts, that boil down to `object.method` under the hood, but allow us to retain our sanity while typing. Phew.
+He knew that if he made developers type `7.*(6)` every time they wanted to multiply two numbers, they would not be happy campers. So he included a few bits of "syntactic sugar", or shortcuts, that boil down to `object.method` under the hood, but allow us to retain our sanity while typing. Phew.
 
-One last thing: you *can* chain methods, like so:
+One last thing: you can **chain** methods, like so:
 
 ```ruby
 "   DhH ".gsub(" ", "").downcase
@@ -190,13 +192,13 @@ One last thing: you *can* chain methods, like so:
 
 Ruby evaluates the expression from left to right, replacing each `object.method` with the `object` that it returns and then evaluating the next `object.method`. So you have to be careful and make sure that the `object` that the first `object.method` returns matches up with the second `method.` **What class of object do I have?** **What methods can I call on this kind of object?**
 
-### Variables
+#### Variables
 
 Remember, you can use your up and down arrows to scroll through your command history. But Ruby has a more important way to save data: we can create a box in memory to hold it and give that box a name, like so:
 
 ```ruby
-s = "Hello" # Create a box, label it `s`, and store "Hello" in it
-s           # Retrieve the value in `s`
+s = "Hello"   # Create a box, label it `s`, and store "Hello" in it
+s             # Retrieve the value in `s`
 s.capitalize
 s.reverse
 s.upcase
@@ -230,24 +232,41 @@ a
 b
 c
 ```
-
-
-
-The one other thing that we do a lot is use **variables** to save our work as we go along:
+So, in addition to `object.method`, **the syntax you need to know like the back of your hand is**
 
 ```ruby
-nospace = "   DhH ".gsub(" ", "")
+storage_box = value.to_be.stored
 ```
 
-That way we don't have to keep typing it over and over for each step of our algorithm:
+*First*, the expression on the right will be evaluated until there are no instructions left and there's just a piece of data remaining.
+
+*Then*, the value will be placed in a variable called `storage_box`, which will be created if it doesn't exist, or will have its value replaced if it does.
+
+Most programs are just a long succession of statements where we do some work with `object.method` and store the result in some variable, then we do some more work on that variable and store the result in yet another variable, and a hundred steps later we've produced our final result and we display that to our user:
 
 ```ruby
-sanitized = nospace.downcase
+user_input = "   DhH "
+input_without_spaces = user_input.gsub(" ", "")
+downcased_input = input_without_spaces.downcase
+"dhh" == downcased_input
 ```
 
+When you are choosing your variable names, there are some rules:
 
+ - names can only contain **lowercase** letters, numbers, and underscores
+ - names cannot begin with a number
 
+Rubyists strive to choose descriptive variable names, no matter how long they are, so that the code reads almost like English -- avoid naming your variables `x`, `y`, and `z`. Use underscores to separate words in multiple word variable names.
 
+## Conclusion
+
+That's it for the fundamental syntax of Ruby!
+
+```
+storage_box = object.method(argument1, argument2, ...)
+```
+
+Now, we need to spend a lot of time *expanding our vocabulary*. Let's start with the most fundamental built-in classes that Ruby gives us.
 
 
 
