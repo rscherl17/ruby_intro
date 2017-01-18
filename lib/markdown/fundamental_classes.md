@@ -139,7 +139,8 @@ a.first
 a.last
 a.second
 a[3]           # Accesses the 4th element! Surprising.
-a[0]           # Arrays start their numbering at 0.
+a[0]
+a[-1]          # Arrays start their numbering at 0.
 a.push(42)
 a.count
 a.last
@@ -152,8 +153,9 @@ That's a fun selection of some common methods, but obviously there are a lot mor
 Then, you should, in order:
 
  - Post a question on Piazza. You are brand new to programming and the answers that you will find on the internet will oftentimes be advanced or just flat out wrong, and you won't yet be able to tell the difference easily. So for now, lean on us and each other.
- - Check the Ruby Docs for whichever class you are wondering about. In this case, the [Array docs](https://ruby-doc.org/core-2.2.0/Array.html). Scan the method list on the left until you see something that looks kinda right, and then check out the examples.
+ - Check the Ruby Docs for whichever class you are wondering about. In this case, the [Array docs](https://ruby-doc.org/core-2.2.0/Array.html). Scan the method list on the left until you see something that looks kinda right, and then check out the examples. (In this case, [#index](https://ruby-doc.org/core-2.2.0/Array.html#method-i-index) sounds about right.)
  - Google it and hope to find a helpful blog post or Stack Overflow answer.
+ - Trial and error! The life of a developer.
 
 ## Next Up
 
