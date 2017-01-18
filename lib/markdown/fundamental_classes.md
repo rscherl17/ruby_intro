@@ -18,6 +18,8 @@ Try:
 7.odd?     # The question mark is nothing special,
            #   just another letter in the method name
 7.days.ago
+rand(10)   # Produces a random integer between 0 and 9
+7.to_s     # Convert yourself to a string, probably for output
 ```
 
 Why wouldn't `"7".even?` work? Take a guess before you try it, and see if your guess matches up with what the error message says.
@@ -43,12 +45,77 @@ Ruby calls decimal numbers `Float`s. Try
 ```ruby
 10.0 / 3
 10 / 3.0
+rand       # Produces a random number between 0 and 1, useful for probability
 ```
 I won't say too much more about `Float`s for now, since they are mostly the same as `Fixnum`s. Use them as needed, but I try to default to integers.
 
 ## String
 
-## `true` and `false`
+We've already met the `String` class a few times, but here are some handy methods to try:
 
+```ruby
+a = "Hello"
+b = "World!"
+a + b        # You can add strings
+a + " " + b
+a * 3        # Yup.
+3 * a        # Nope.
+a.upcase
+a.downcase
+a.swapcase
+a.reverse
+a.length
+a.gsub("ll", "✌️")
+```
+
+Some more realistic examples:
+
+```ruby
+u = "  a messy input string    "
+u.strip
+u.capitalize  # Oops.
+u = u.strip
+u.capitalize
+u.titlecase
+
+"lo".in?("hello")
+"".present?
+"".blank?
+"hi".present?
+"hi".blank?
+```
+
+We spend a lot of time composing strings of output for our users, so let's see a few more examples. Try this:
+
+```ruby
+message = "Your lucky number for today is " + rand(100) + "."
+```
+
+You'll see that Ruby gets confused, because we are trying to add an integer to a string and it doesn't feel comfortable with that.
+
+The solution is to tell the integer to convert itself to a string first:
+
+```ruby
+message = "Your lucky number for today is " + rand(100).to_s + "."
+```
+
+The above technique for composing strings, adding them together with `+`, is called **string concatenation**.
+
+There's another technique for composing strings that I personally find a bit easier; it's called **string interpolation**. It goes like this:
+
+```ruby
+message = "Your lucky number for today is #{rand(100)}."
+```
+
+Basically, inside the string, you place `#{}` where you eventually want your value to go. Inside the curly braces, you can write any Ruby expression without worrying about whether it is a string or not. The expression will be evaluated, converted to a string, and added to the string right in that spot. You can interpolate as many expressions as you want into a single string. Pretty neat!
+
+If you find interpolation confusing, feel free to just use concatenation.
 
 ## Arrays
+
+Finally, we have a very important class: `Array`. Most of what we do as web developers is manage *lists of things*. Lists of photos, likes, followers, reviews, listings, messages, whatever.
+
+The first structure we're going to learn to help us manage lists is `Array`. Here's how they work:
+
+```ruby
+```
