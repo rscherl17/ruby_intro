@@ -266,13 +266,7 @@ That's it for the primary syntax of Ruby!
 storage_box = object.method(argument1, argument2, ...)
 ```
 
-Now, we need to spend some time *expanding our vocabulary*. Let's start with the most fundamental built-in classes that Ruby gives us.
-
-
-
-
-
-
+Now, we need to spend some time *expanding our vocabulary*. Let's start with [the most fundamental built-in classes that Ruby gives us](/fundamental_classes).
 
 
 [^1]: [MDN HTML element reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)

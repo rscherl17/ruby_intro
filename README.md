@@ -1,24 +1,12 @@
-# README
+# Ruby Intro
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ - First **fork** this project to your own account.
+ - Then clone it to your computer.
+ - Open up the whole folder in Atom.
+ - From the command line, `cd` into the project folder.
+ - Run the command `bundle install`.
+ - Run the command `rails server`.
+ - Navigate to [http://localhost:3000](http://localhost:3000) in Chrome.
+ - Read the instructions and get started!

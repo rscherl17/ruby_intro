@@ -159,4 +159,4 @@ Then, you should, in order:
 
 ## Next Up
 
-Alright! It's been fun playing around with Ruby in the console on the right, but how would we actually builds some real, permanent programs that we can share with our friends? That's what we'll see next.
+Alright! It's been fun playing around with Ruby in the console on the right, but how would we actually builds some real, [permanent programs](/permanent_programs) that we can share with our friends? That's what we'll see next.

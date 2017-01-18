@@ -159,6 +159,8 @@ Ruby, as a general purpose language, can be used for just about anything -- prod
 
 That way, instead of re-inventing the wheel for all that first, we can just get right down to the fun stuff -- bringing our ideas to life!
 
+Next, let's learn the [Primary Syntax of Ruby](/primary_syntax).
+
 [^1]: [http://sonic-pi.net/](http://sonic-pi.net/)
 
 [^2]: [http://artoo.io/](http://artoo.io/)
