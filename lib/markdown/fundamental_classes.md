@@ -139,8 +139,8 @@ a.first
 a.last
 a.second
 a[3]           # Accesses the 4th element! Surprising.
-a[0]
-a[-1]          # Arrays start their numbering at 0.
+a[0]           # Arrays start their numbering at 0.
+a[-1]          
 a.push(42)
 a.count
 a.last
